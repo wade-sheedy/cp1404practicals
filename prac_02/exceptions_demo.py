@@ -11,14 +11,17 @@ import math
 try:
     numerator = int(input("Enter the numerator: "))
     denominator = int(input("Enter the denominator: "))
-    fraction = numerator / denominator
-    print(fraction)
+    if denominator == 0:
+        denominator = 'Infinity'
+        print("The fraction has reached a limit and the denominator has reached a limit and has achieved {} ".format(denominator))
+    else:
+        fraction = numerator / denominator
+        print(fraction)
 except ValueError:
     print("Numerator and denominator must be valid numbers!")
-except ZeroDivisionError:
-    denominator = 1 * math.pow(10, 15)
-    fraction = numerator / denominator
-    print(fraction)
-    print("Cannot divide by zero! converting to a number close to zero but not zero")
+#except ZeroDivisionError:
+    #denominator = 1 * math.pow(10, 15)
+    #fraction = numerator / denominator
+    #print(fraction)
+    #print("Cannot divide by zero! converting to a number close to zero but not zero")
 print("Finished.")
-
